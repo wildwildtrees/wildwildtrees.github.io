@@ -11,6 +11,7 @@
         <div>
             <input id="counter" type="button" value="0" onclick="increment();"/>
         </div>
+        <div> <input id="countdown" type="button" value="countdown" onclick="minus();"/></div>
         <script>
         counterValue = 0     
         //alert("Hey nick, why isn't you comptuer working?") ; 
@@ -22,6 +23,10 @@
             counterValue++ ; 
             document.getElementById("counter").value = counterValue ; 
         } 
+        function minus() {
+            counterValue-- ; 
+            document.getElementById("counter").value = counterValue ;
+        }
         </script>
     </body>
 </html>
