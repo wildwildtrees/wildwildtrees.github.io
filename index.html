@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+            Welcome to a Javascript tutorial!
+        </title>
+    </head>
+    <body>
+        Enjoy your Stay!
+        <div id="name">Please click the button to set a name</div>
+        <input id="clickMe" type="button" value="Change Name" onclick="getName();" />
+        <div>
+            <input id="counter" type="button" value="0" onclick="increment();"/>
+        </div>
+        <script>
+        counterValue = 0     
+        //alert("Hey nick, why isn't you comptuer working?") ; 
+        function getName() {
+            name = prompt("enter your name:") ;
+            document.getElementById("name").innerHTML = "Welcome " + name ;
+        }
+        function increment() {
+            counterValue++ ; 
+            document.getElementById("counter").value = counterValue ; 
+        } 
+        </script>
+    </body>
+</html>
