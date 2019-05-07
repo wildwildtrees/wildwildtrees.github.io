@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title> Check out the changes to the JS tutorial! 
+
+        </title>
+    </head>
+<body>
+Enjoy your stay!
+<div id="name">Please click the button to set your name </div>
+<div> <input id="Clickme" type="button" value="Changename" onclick="getName();" ></div>
+<div> <input id="counter" type="button" value="5" onclick="increment();" ></div>
+<div> <input id="countdown" type="button" value="countdown" onclick="minus();"></div>
+<script>
+    counterValue = 5
+    function getName() {
+        name = prompt("Enter your name please.") ; 
+        document.getElementById("name").innerHTML = "Welcome " + name ;
+    }
+    function increment() {
+        counterValue++ ;
+        document.getElementById("counter").value = counterValue ; 
+    }
+    function minus() {
+        counterValue--
+        document.getElementById("counter").value = counterValue ;
+    }
+</script>
+</body>
+</html>
