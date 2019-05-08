@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>
+            Todo List Demo
+        </title>
+    </head>
+    <body>
+        <div>Todo List:</div>
+        <div id="todo">
+            <ul id="list">
+            </ul>
+        </div>
+        <div><input id="addItem" type="button" value="Add Item" onclick="addItem()"></div>
+        <script>
+            var basket = ["apple","orange","kiwi"] ;
+            function makeList(inputList) {
+                var list = document.createElement('ul') ;
+                list.setAttribute("id","list") ;
+                for (var i = 0 ; i < inputList.length ; i++) {
+                    var item = document.createElement('li') ;
+                    item.appendChild(document.createTextNode(inputList[i])) ;
+                    list.appendChild(item) ;
+                }
+                return list ; 
+            }
+            function setList(inputList) {
+                var list = makeList(inputList) ;
+                // replacedNode = parentNode.replaceChild(newChild, oldChild);
+                var parentNode = document.getElementById("todo") ;
+                var oldChild = document.getElementById("list") ; 
+                var replacedNode = parentNode.replaceChild(list,oldChild) ;
+                //parentNode.appendChild(list) ;
+            }
+            setList(basket) ;
+            function addItem() {
+                var newItem = prompt("What item would you like to add to the list?") ;
+                basket.push(newItem) ;
+                setList(basket) ;
+            }
+        </script>
+    </body>
+</html>
