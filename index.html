@@ -14,10 +14,14 @@
         <div> <input id="countdown" type="button" value="countdown" onclick="minus();"/></div>
         <script>
         counterValue = 0     
-        //alert("Hey nick, why isn't you comptuer working?") ; 
+        //alert("Hey you, why are you looking at this?") ; 
         function getName() {
             name = prompt("enter your name:") ;
+            if (name == null || name == "") { 
+                document.getElementById("name").innerHTML = "Please enter a name!" ;
+            } else {
             document.getElementById("name").innerHTML = "Welcome " + name ;
+            }
         }
         function increment() {
             counterValue++ ; 
