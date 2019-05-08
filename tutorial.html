@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>
+            Welcome to a Javascript tutorial!
+        </title>
+    </head>
+    <body>
+        Enjoy your Stay!
+        <div id="name">Please click the button to set a name</div>
+        <input id="clickMe" type="button" value="Change Name" onclick="getName();" />
+        <div>
+            <input id="counter" type="button" value="0" onclick="increment();"/>
+        </div>
+        <div> <input id="countdown" type="button" value="countdown" onclick="minus();"/></div>
+        <script>
+        var counterValue = 0     
+        //alert("Hey you, why are you looking at this?") ; 
+        function getName() {
+            const name = prompt("enter your name:") ;
+            console.log(name) ;
+            console.log(name == null) ;
+            if (name == null || name == "") { 
+                document.getElementById("name").innerHTML = "Please enter a name!" ;
+            } else {
+            document.getElementById("name").innerHTML = "Welcome " + name ;
+            }
+        }
+        function increment() {
+            counterValue++ ; 
+            document.getElementById("counter").value = counterValue ; 
+        } 
+        function minus() {
+            counterValue-- ; 
+            document.getElementById("counter").value = counterValue ;
+        }
+        </script>
+    </body>
+</html>
