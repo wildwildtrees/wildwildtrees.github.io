@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Simple Synthesizer</title>
+    </head>
+    <body>
+        <div>Simple Synthesizer</div>
+        <div>
+            <input type="button" value="C" onclick='playNote("C4")'>
+            <input type="button" value="D" onclick='playNote("D4")'>
+            <input type="button" value="E" onclick='playNote("E4")'>
+            <input type="button" value="F" onclick='playNote("F4")'>
+            <input type="button" value="G" onclick='playNote("G4")'>
+            <input type="button" value="A" onclick='playNote("A4")'>
+            <input type="button" value="B" onclick='playNote("B4")'>
+        </div>
+        
+        <script>
+            var synth ;
+            window.onload = function() {
+                 var context = new AudioContext();
+            // Setup all nodes
+                synth = new Tone.Synth();
+                synth.toMaster();
+                
+            };
+            function playNote(note) {
+                const time = 0 ;
+                synth.triggerAttackRelease(note, 0.25);
+                };
+        </script>
+        <script src="Tone.js"></script>
+    </body>
+</html>
